@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TicketService } from 'src/app/Services/ticket.service';
+import { TicketService } from '../../Services/ticket.service';
 
 @Component({
   selector: 'app-list-tickets',

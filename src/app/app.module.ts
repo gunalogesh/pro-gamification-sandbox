@@ -8,6 +8,10 @@ import { AddTicketComponent } from './Components/add-ticket/add-ticket.component
 import { ConfirmDialogComponent } from './Components/confirm-dialog/confirm-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProGamificationModule } from '@theproindia/pro-gamification';
+import { BookTicketComponent } from './Components/book-ticket/book-ticket.component';
+import { OfferComponent } from './Components/offer/offer.component';
+import { BusDetailComponent } from './Components/bus-detail/bus-detail.component';
+import { FooterComponent } from './Components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,6 +19,10 @@ import { ProGamificationModule } from '@theproindia/pro-gamification';
     ListTicketsComponent,
     AddTicketComponent,
     ConfirmDialogComponent,
+    BookTicketComponent,
+    OfferComponent,
+    BusDetailComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+ul li {
+  list-style: none;
+  height: 1.5em;
+}
+.product-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+.list {
+  color: #d5d5d5;
+  font-size: 14px;
+  text-align: left;
+}
+ul {
+  padding: 0 !important;
+  margin: 0 !important;
+}

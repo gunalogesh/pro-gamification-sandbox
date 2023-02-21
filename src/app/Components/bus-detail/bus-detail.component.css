@@ -1,0 +1,75 @@
+.container-decoration {
+  width: 100%;
+  border: 1px solid #dedede;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px #0000000a;
+  opacity: 1;
+  min-height: 127px;
+}
+.bus-name-detail {
+  margin-left: 26px;
+}
+.bus-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333;
+  padding: 18px 0px 5px 0px;
+}
+.bus-type {
+  font-size: 14px;
+  color: #5a5a5a;
+  padding: 0px 0px 10px 0px;
+}
+.bus-facililty {
+  width: 160px;
+  height: 35px;
+  background-image: url(../../../assets/images/bus-facility.png);
+}
+.bus-detail-container {
+  display: flex;
+  justify-content: space-between;
+}
+.bus-timing-detail,
+.bus-fare-detail {
+  text-align: center;
+}
+.start-place {
+  font-size: 14px;
+  color: #5a5a5a;
+  margin-bottom: 0.5em;
+}
+.start-time {
+  font-size: 18px;
+  color: #333333;
+  padding: 8px 13px;
+  border: 1px solid #dedede;
+  font-weight: bold;
+  border-radius: 50px;
+}
+.timing-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.horizontal-line {
+  width: 128px;
+  height: 2px;
+  background-color: #dedede;
+  color: #dedede;
+  border-width: 0;
+}
+.bus-fare-detail {
+  display: flex;
+  align-items: center;
+  padding: 26px;
+}
+.bus-fare {
+  font-size: 20px;
+  color: #005749;
+  font-weight: bold;
+}
+.country {
+  color: #ffa600;
+  font-size: 14px;
+}

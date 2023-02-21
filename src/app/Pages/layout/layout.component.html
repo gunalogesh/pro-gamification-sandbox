@@ -1,10 +1,23 @@
 <header>
-  <div class="title">PRO GAMIFICATION - Angular SandBox</div>
-  <div>
-    <pro-gamification
-      [userId]="gamificationUserId"
-      [applicationId]="gamificationAppId"
-    ></pro-gamification>
+  <div class="empty-container"></div>
+  <div class="header-content">
+    <div class="title">PRO Gamify</div>
+    <div>
+      <pro-gamification
+        [userId]="gamificationUserId"
+        [applicationId]="gamificationAppId"
+      ></pro-gamification>
+    </div>
   </div>
+  <div class="empty-container"></div>
 </header>
-<router-outlet></router-outlet>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<footer>
+  <div class="empty-container"></div>
+  <div class="footer-content">
+    <app-footer></app-footer>
+  </div>
+  <div class="empty-container"></div>
+</footer>

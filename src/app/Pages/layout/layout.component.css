@@ -4,6 +4,8 @@ header {
   display: flex;
   align-items: center;
   margin: 0 auto;
+  position: fixed;
+  width: 100%;
 }
 .header-content {
   width: 70%;
@@ -51,6 +53,7 @@ footer {
     width: 90%;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .container {
     width: 90%;
@@ -63,5 +66,20 @@ footer {
   }
   .footer-content {
     width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 70%;
+  }
+  .empty-container {
+    width: 15%;
+  }
+  .header-content {
+    width: 70%;
+  }
+  .footer-content {
+    width: 70%;
   }
 }

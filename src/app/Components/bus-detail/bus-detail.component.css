@@ -2,28 +2,28 @@
   width: 100%;
   border: 1px solid #dedede;
   background: #ffffff 0% 0% no-repeat padding-box;
-  border-radius: 10px;
+  border-radius: 0.625em;
   box-shadow: 0px 3px 6px #0000000a;
   opacity: 1;
   min-height: 127px;
 }
 .bus-name-detail {
-  margin-left: 26px;
+  margin-left: 1.625em;
 }
 .bus-name {
-  font-size: 20px;
+  font-size: 1.25em;
   font-weight: bold;
   color: #333333;
-  padding: 18px 0px 5px 0px;
+  padding: 1.125em 0px 5px 0px;
 }
 .bus-type {
-  font-size: 14px;
+  font-size: 0.8em;
   color: #5a5a5a;
-  padding: 0px 0px 10px 0px;
+  padding: 0px 0px 0.625em 0px;
 }
 .bus-facililty {
-  width: 160px;
-  height: 35px;
+  width: 10em;
+  height: 2em;
 }
 .bus-detail-container {
   display: flex;
@@ -35,17 +35,17 @@
   text-align: center;
 }
 .start-place {
-  font-size: 14px;
+  font-size: 0.8em;
   color: #5a5a5a;
   margin-bottom: 0.5em;
 }
 .start-time {
-  font-size: 18px;
+  font-size: 1.125em;
   color: #333333;
-  padding: 8px 13px;
+  padding: 0.5em 0.8em;
   border: 1px solid #dedede;
   font-weight: bold;
-  border-radius: 50px;
+  border-radius: 3.125em;
 }
 .timing-container {
   display: flex;
@@ -53,7 +53,7 @@
   align-items: center;
 }
 .horizontal-line {
-  width: 128px;
+  width: 8em;
   height: 2px;
   background-color: #dedede;
   color: #dedede;
@@ -62,42 +62,42 @@
 .bus-fare-detail {
   display: flex;
   align-items: center;
-  padding: 26px;
+  padding: 1.625em;
 }
 .bus-fare {
-  font-size: 20px;
+  font-size: 1.25em;
   color: #005749;
   font-weight: bold;
 }
 .country {
   color: #ffa600;
-  font-size: 14px;
+  font-size: 0.8em;
 }
 
 .confirm-section {
   margin-top: 1em;
   border-top: 1px solid #dedede;
-  height: 480px;
+  height: 30em;
   background-color: #ebeaea;
 }
 .payment-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 26px;
+  margin: 1.625em;
 }
 .seat-selection {
-  height: 430px;
-  width: 430px;
+  height: 26em;
+  width: 26em;
   background-repeat: no-repeat;
   background-size: contain;
 }
 .payment {
-  height: 430px;
-  width: 430px;
+  height: 26em;
+  width: 26em;
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #dedede;
-  border-radius: 10px;
+  border-radius: 0.625em;
 }
 .boarding {
   display: flex;
@@ -114,29 +114,29 @@
 }
 
 .boarding-time {
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: bold;
 }
 .boarding-title {
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: bold;
   color: #333333;
 }
 .boarding-subtitle {
-  font-size: 14px;
+  font-size: 0.8em;
   color: #00774b;
   font-weight: bold;
 }
 .payment-wrap {
-  margin: 25px;
+  margin: 1.625em;
 }
 .boarding-place-title {
-  font-size: 16px;
+  font-size: 1em;
   color: #333333;
   font-weight: 700;
 }
 .boarding-place-subtitle {
-  font-size: 14px;
+  font-size: 0.8em;
   color: #5a5a5a;
 }
 .horizontal-separator {
@@ -162,10 +162,10 @@
 }
 .confirm-button {
   background: #ffa600 0% 0% no-repeat padding-box;
-  border-radius: 50px;
-  padding: 18px 48px;
+  border-radius: 3.125em;
+  padding: 1.125em 3em;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125em;
   margin: 1em 0em;
   cursor: pointer;
 }

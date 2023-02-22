@@ -1,15 +1,15 @@
 .offer-container {
-  width: 440px;
-  height: 136px;
+  width: 27.5em;
+  height: 8.5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border: 1px solid #dedede;
   max-width: 28em;
-  border-radius: 10px;
+  border-radius: 0.625em;
   flex-direction: row;
-  margin-left: 26px;
-  margin-bottom: 26px;
+  margin-left: 1.625em;
+  margin-bottom: 1.625em;
 }
 .offer-image-container {
   min-width: 6.25em;
@@ -17,25 +17,25 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 10px;
+  border-radius: 0.625em;
   margin: 11px;
 }
 .offer-text-container {
   max-width: 28em;
 }
 .offer-title {
-  font-size: 20px;
+  font-size: 1.25em;
   font-weight: bold;
   color: #333333;
 }
 .offer-sub-title {
-  font-size: 14px;
+  font-size: 0.8em;
   color: #5a5a5a;
   padding: 0em 0em 0.5em 0em;
   font-weight: bold;
 }
 .offer-button {
-  font-size: 14px;
+  font-size: 0.8em;
   color: #00774b;
   font-weight: bold;
   padding: 1em 0em 0em 0em;

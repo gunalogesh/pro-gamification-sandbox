@@ -27,7 +27,10 @@
   </div>
   <div class="confirm-section" *ngIf="togglePaymet">
     <div class="payment-container">
-      <div class="seat-selection"></div>
+      <div
+        class="seat-selection"
+        [style.backgroundImage]="'url(' + seats + sasToken + ')'"
+      ></div>
       <div class="payment">
         <div class="payment-wrap">
           <div class="boarding">

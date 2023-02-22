@@ -18,6 +18,9 @@ export class BusDetailComponent implements OnInit {
   busFacility: string =
     'https://stagegamificationui.blob.core.windows.net/sandbox-assets/bus-facility.png';
 
+  seats: string =
+    'https://stagegamificationui.blob.core.windows.net/sandbox-assets/seats.png';
+
   ngOnInit(): void {}
 
   bookTicket() {

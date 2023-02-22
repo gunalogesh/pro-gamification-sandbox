@@ -24,7 +24,6 @@
 .bus-facililty {
   width: 160px;
   height: 35px;
-  background-image: url(../../../assets/images/bus-facility.png);
 }
 .bus-detail-container {
   display: flex;
@@ -90,7 +89,6 @@
 .seat-selection {
   height: 430px;
   width: 430px;
-  background-image: url("https://stagegamificationui.blob.core.windows.net/sandbox-assets/seats.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D");
   background-repeat: no-repeat;
   background-size: contain;
 }

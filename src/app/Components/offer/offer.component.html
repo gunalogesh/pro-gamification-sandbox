@@ -1,10 +1,13 @@
 <div class="offer-container">
-  <div class="offer-image-container"></div>
+  <div
+    class="offer-image-container"
+    [style.backgroundImage]="'url(' + offer['imageSource'] + sasToken + ')'"
+  ></div>
   <div class="offer-text-container">
     <div>
-      <div class="offer-title">Grab up to 10% offer</div>
+      <div class="offer-title">{{ offer["title"] }}</div>
       <div class="offer-sub-title">
-        on domestic hotels, outstation cabs & bus bookings.
+        {{ offer["subTitle"] }}
       </div>
     </div>
     <div>

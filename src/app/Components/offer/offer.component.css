@@ -14,7 +14,6 @@
 .offer-image-container {
   min-width: 6.25em;
   min-height: 6.25em;
-  background-image: url("http://via.placeholder.com/640x360");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

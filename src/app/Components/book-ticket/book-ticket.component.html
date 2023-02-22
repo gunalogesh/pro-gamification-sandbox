@@ -33,16 +33,16 @@
     <div class="offers-title">Offers</div>
     <div class="offers-wrap">
       <div class="offer-1-section">
-        <app-offer></app-offer>
-        <app-offer></app-offer>
-        <app-offer></app-offer>
-        <app-offer></app-offer>
+        <app-offer
+          *ngFor="let offer of offers | slice : 0"
+          [offer]="offer"
+        ></app-offer>
       </div>
       <div class="offer-2-section">
-        <app-offer></app-offer>
-        <app-offer></app-offer>
-        <app-offer></app-offer>
-        <app-offer></app-offer>
+        <app-offer
+          *ngFor="let offer of offers | slice : 3"
+          [offer]="offer"
+        ></app-offer>
       </div>
     </div>
   </div>
@@ -50,10 +50,10 @@
 <section>
   <div class="bus-detail-section container-decoration">
     <div class="bus-list">
-      <app-bus-detail></app-bus-detail>
-      <app-bus-detail></app-bus-detail>
-      <app-bus-detail></app-bus-detail>
-      <app-bus-detail></app-bus-detail>
+      <app-bus-detail
+        *ngFor="let bus of buses"
+        [busDetails]="bus"
+      ></app-bus-detail>
     </div>
   </div>
 </section>

@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './Pages/layout/layout.component';
-import { ListTicketsComponent } from './Pages/list-tickets/list-tickets.component';
-import { AddTicketComponent } from './Components/add-ticket/add-ticket.component';
 import { ConfirmDialogComponent } from './Components/confirm-dialog/confirm-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProGamificationModule } from '@theproindia/pro-gamification';
@@ -16,8 +14,6 @@ import { FooterComponent } from './Components/footer/footer.component';
   declarations: [
     AppComponent,
     LayoutComponent,
-    ListTicketsComponent,
-    AddTicketComponent,
     ConfirmDialogComponent,
     BookTicketComponent,
     OfferComponent,

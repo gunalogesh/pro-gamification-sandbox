@@ -29,6 +29,7 @@
 .bus-detail-container {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 .bus-timing-detail,
 .bus-fare-detail {
@@ -72,4 +73,101 @@
 .country {
   color: #ffa600;
   font-size: 14px;
+}
+
+.confirm-section {
+  margin-top: 1em;
+  border-top: 1px solid #dedede;
+  height: 480px;
+  background-color: #ebeaea;
+}
+.payment-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 26px;
+}
+.seat-selection {
+  height: 430px;
+  width: 430px;
+  background-image: url("https://stagegamificationui.blob.core.windows.net/sandbox-assets/seats.png?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.payment {
+  height: 430px;
+  width: 430px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+}
+.boarding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.boarding-wrap {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  justify-content: start;
+  margin-bottom: 2em;
+}
+
+.boarding-time {
+  font-size: 18px;
+  font-weight: bold;
+}
+.boarding-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+}
+.boarding-subtitle {
+  font-size: 14px;
+  color: #00774b;
+  font-weight: bold;
+}
+.payment-wrap {
+  margin: 25px;
+}
+.boarding-place-title {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 700;
+}
+.boarding-place-subtitle {
+  font-size: 14px;
+  color: #5a5a5a;
+}
+.horizontal-separator {
+  width: 100%;
+  height: 2px;
+  background-color: #dedede;
+  color: #dedede;
+  border-width: 0;
+  margin-bottom: 1em;
+}
+.seat-number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  font-weight: 700;
+}
+.confirm-payment {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1em;
+}
+.confirm-button {
+  background: #ffa600 0% 0% no-repeat padding-box;
+  border-radius: 50px;
+  padding: 18px 48px;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 1em 0em;
+  cursor: pointer;
 }

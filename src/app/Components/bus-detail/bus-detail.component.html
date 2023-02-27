@@ -1,27 +1,31 @@
 <div class="container-decoration">
   <div class="bus-detail-container" (click)="togglePayment()">
-    <div class="bus-name-detail">
-      <div class="bus-name">{{ busDetails.name }}</div>
-      <div class="bus-type">{{ busDetails.type }}</div>
-      <div
-        class="bus-facililty"
-        [style.backgroundImage]="'url(' + busFacility + sasToken + ')'"
-      ></div>
-    </div>
-    <div class="timing-container">
-      <div class="bus-timing-detail">
-        <div class="start-place">{{ busDetails.startPlace }}</div>
-        <div class="start-time">{{ busDetails.startTime }}</div>
+    <div class="bus-detail-container">
+      <div class="bus-name-detail">
+        <div class="bus-name">{{ busDetails.name }}</div>
+        <div class="bus-type">{{ busDetails.type }}</div>
+        <div
+          class="bus-facililty"
+          [style.backgroundImage]="'url(' + busFacility + sasToken + ')'"
+        ></div>
       </div>
-      <div class="horizontal-line"></div>
-      <div class="bus-timing-detail">
-        <div class="start-place">{{ busDetails.endPlace }}</div>
-        <div class="start-time">{{ busDetails.endTime }}</div>
+      <div class="timing-container">
+        <div class="timing-wrap">
+          <div class="place-container start">
+            <div class="place">{{ busDetails.startPlace }}</div>
+            <div class="time">{{ busDetails.startTime }}</div>
+          </div>
+          <div class="hr"></div>
+          <div class="place-container end">
+            <div class="place">{{ busDetails.endPlace }}</div>
+            <div class="time">{{ busDetails.endTime }}</div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="bus-fare-detail">
       <div class="bus-fare">
-        <span class="country">INR</span> {{ busDetails.fare }}
+        <span class="country">&#x20b9;</span> {{ busDetails.fare }}
       </div>
     </div>
   </div>

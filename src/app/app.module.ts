@@ -10,6 +10,7 @@ import { BookTicketComponent } from './Components/book-ticket/book-ticket.compon
 import { OfferComponent } from './Components/offer/offer.component';
 import { BusDetailComponent } from './Components/bus-detail/bus-detail.component';
 import { FooterComponent } from './Components/footer/footer.component';
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -6,6 +6,7 @@ header {
   margin: 0 auto;
   position: fixed;
   width: 100%;
+  z-index: 11;
 }
 .header-content {
   width: 70%;
@@ -18,7 +19,6 @@ header {
   font-size: 1.5em;
   color: #fff;
 }
-
 .container {
   display: block;
   margin: 0 auto;
@@ -27,7 +27,6 @@ header {
 .empty-container {
   width: 15%;
 }
-
 footer {
   background-color: #235449;
   display: flex;
@@ -38,7 +37,12 @@ footer {
   width: 70%;
   margin: 3.125em 0 3.125em 0;
 }
-
+.brand-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
 @media only screen and (min-width: 820px) {
   .container {
     width: 90%;

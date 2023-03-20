@@ -10,6 +10,7 @@ import { BookTicketComponent } from './Components/book-ticket/book-ticket.compon
 import { OfferComponent } from './Components/offer/offer.component';
 import { BusDetailComponent } from './Components/bus-detail/bus-detail.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -27,8 +28,7 @@ import { FooterComponent } from './Components/footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     ProGamificationModule.forRoot({
-      gamificationApiUrl:
-        'https://stage-gamificationapi.theproindia.com/tokens/sandbox/1f5c88ef-830c-47f7-8da0-b17b4e3fe536/dbb74e4e-bf07-4a41-ab5c-f75696bc39dd',
+      gamificationApiUrl: `https://stage-gamificationapi.theproindia.com/tokens/sandbox/${environment?.gamification.clientId}/${environment.gamification.clientSecret}`,
     }),
   ],
   providers: [],

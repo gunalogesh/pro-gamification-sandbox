@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Gamification } from '@theproindia/pro-gamification';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-bus-detail',
@@ -25,8 +26,8 @@ export class BusDetailComponent implements OnInit {
 
   bookTicket() {
     this.gamification.updateGameAction(
-      '3d5447f4-7dfb-4885-9182-af84ec854344',
-      '63cfb384ea64854865baea60',
+      environment.gamification.userId,
+      environment.gamification.gameId,
       '',
       ''
     );

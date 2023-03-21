@@ -28,7 +28,7 @@ import { environment } from '../environments/environment';
     FormsModule,
     ReactiveFormsModule,
     ProGamificationModule.forRoot({
-      gamificationApiUrl: `https://stage-gamificationapi.theproindia.com/tokens/sandbox/${environment?.gamification.clientId}/${environment.gamification.clientSecret}`,
+      gamificationApiUrl: `https://stage-gamificationapi.theproindia.com/tokens/sandbox/${environment?.clientId}/${environment.clientSecret}`,
     }),
   ],
   providers: [],

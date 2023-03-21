@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Gamification } from '@theproindia/pro-gamification';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-bus-detail',

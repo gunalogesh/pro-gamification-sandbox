@@ -5,6 +5,7 @@ header {
   align-items: center;
   margin: 0 auto;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 11;
 }
@@ -26,6 +27,7 @@ header {
 }
 .empty-container {
   width: 15%;
+  margin-top: 3.75em;
 }
 footer {
   background-color: #235449;
@@ -85,5 +87,21 @@ footer {
   }
   .footer-content {
     width: 70%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+  .empty-container {
+    width: 0%;
+  }
+  .header-content {
+    width: 95%;
+    margin-left: 0.5em;
+  }
+  .footer-content {
+    width: 95%;
   }
 }

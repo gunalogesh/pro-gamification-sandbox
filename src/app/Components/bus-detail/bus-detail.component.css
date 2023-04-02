@@ -99,7 +99,7 @@
 
 .seat-selection {
   height: 26em;
-  width: 26em;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -238,4 +238,12 @@
 
 .place-container.end:after {
   left: 0;
+}
+@media only screen and (max-width: 480px) {
+  .bus-detail-container {
+    flex-direction: column;
+  }
+  .bus-fare-detail {
+    display: none;
+  }
 }

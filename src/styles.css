@@ -6,3 +6,13 @@ body {
   margin: 0;
   font-family: sans-serif;
 }
+
+.flex-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.grey-text {
+  color: #656565;
+}

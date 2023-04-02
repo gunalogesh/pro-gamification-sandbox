@@ -1,0 +1,56 @@
+.container {
+  width: 25em;
+  height: 25em;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 1px solid #dedede;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 0.625em;
+  box-shadow: 0px 3px 6px #0000000a;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+  padding: 1em;
+}
+.header-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+.points-decoration {
+  width: max-content;
+  padding: 2em;
+  border: 1px solid #dedede;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 0.625em;
+  box-shadow: 0px 3px 6px #0000000a;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.points {
+  font-weight: bold;
+}
+.close-button-container {
+  text-align: left;
+  margin-left: 1em;
+  cursor: pointer;
+}
+.points-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

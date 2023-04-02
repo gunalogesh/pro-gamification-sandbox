@@ -4,6 +4,30 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class TicketService {
+  date = new Date(Date.now());
+  dayNames = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
+  monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
   constructor() {}
 
   tickets = [
@@ -57,4 +81,61 @@ export class TicketService {
   addTickets(ticket: any) {
     this.tickets.push(ticket);
   }
+
+  trips = [
+    {
+      date: this.date.getDate(),
+      time: this.date.toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: 'numeric',
+      }),
+      day: this.dayNames[this.date.getDay()],
+      month: this.monthNames[this.date.getMonth()],
+      year: this.date.getFullYear(),
+      from: 'Chennai',
+      to: 'Madurai',
+      boarding: 'kolathur',
+      drop: 'Mattuthavani',
+      rating: 0,
+      travels: 'YBM Travels',
+      isRated: false,
+      ticketId: '3445445345',
+    },
+    {
+      date: this.date.getDate(),
+      time: this.date.toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: 'numeric',
+      }),
+      day: this.dayNames[this.date.getDay()],
+      month: this.monthNames[this.date.getMonth()],
+      year: this.date.getFullYear(),
+      from: 'Chennai',
+      to: 'Trichy',
+      drop: 'Central Bus Stop',
+      boarding: 'CMBT',
+      rating: 5,
+      travels: 'KPN Travels',
+      isRated: true,
+      ticketId: '7298348942',
+    },
+    {
+      date: this.date.getDate(),
+      time: this.date.toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: 'numeric',
+      }),
+      day: this.dayNames[this.date.getDay()],
+      month: this.monthNames[this.date.getMonth()],
+      year: this.date.getFullYear(),
+      from: 'Chennai',
+      to: 'Bangalore',
+      boarding: 'Guindy',
+      drop: 'Main Bus Stop',
+      rating: 4,
+      travels: 'Vignesh TAT Travels',
+      isRated: true,
+      ticketId: '2033940393',
+    },
+  ];
 }

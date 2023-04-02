@@ -1,0 +1,29 @@
+<div class="contianer">
+  <div class="my-trip-header">My Trips</div>
+  <div class="trip-details container-decoration" *ngFor="let trip of trips">
+    <div class="dateSection">
+      <ul>
+        <li>{{ trip.date }}</li>
+        <li>{{ trip.month + " " + trip.year }}</li>
+        <li>{{ trip.day }}</li>
+      </ul>
+    </div>
+    <div class="bus-trip-details">
+      <div class="flex bus-trip-header">
+        <div class="small-font">Bus Ticket</div>
+        <div class="small-font confirmed">Confirmed</div>
+      </div>
+      <div>
+        <div>{{ trip.from }} - {{ trip.to }}</div>
+        <div class="small-font">{{ trip.travels }}</div>
+      </div>
+      <hr />
+      <div class="flex" style="margin-top: 1em">
+        <div class="small-font">Boarding: {{ trip.boarding }}</div>
+        <div (click)="openRatingPage(trip)" class="rate-button small-font">
+          Rate & Review
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

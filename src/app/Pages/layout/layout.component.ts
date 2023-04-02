@@ -11,7 +11,16 @@ export class LayoutComponent implements OnInit {
   gamificationAppId = environment.gamification.applicationId;
   logoUrl =
     'https://stagegamificationui.blob.core.windows.net/sandbox-assets/flag.svg?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D';
+  showTripContainer = false;
   constructor() {}
 
   ngOnInit(): void {}
+
+  showTrips() {
+    this.showTripContainer = !this.showTripContainer;
+  }
+
+  closeContianer() {
+    this.showTripContainer = false;
+  }
 }

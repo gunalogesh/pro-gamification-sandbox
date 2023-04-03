@@ -1,9 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Gamification } from '@theproindia/pro-gamification';
 import { ModalService } from 'src/app/Services/modal.service';
 import { TicketService } from 'src/app/Services/ticket.service';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-rating',
@@ -12,7 +10,6 @@ import { environment } from 'src/environments/environment';
 })
 export class RatingComponent implements OnInit {
   constructor(
-    public gamification: Gamification,
     public activatedRoute: ActivatedRoute,
     public ticketService: TicketService,
     public modalService: ModalService
@@ -36,17 +33,11 @@ export class RatingComponent implements OnInit {
 
   addReview() {
     if (this.rating && this.feedback) {
-      this.gamification.updateGameAction(
-        environment.gamification.userId,
-        '642950539d6bdcf7cea24a91',
-        '',
-        ''
-      );
       this.resetForm();
       this.modalService.modalStateData.next({
-        headerText: 'Booked Successfully',
+        headerText: 'Glad you Like it',
         pointsText: 'Points',
-        points: '100',
+        points: '25',
       });
       this.modalService.openModal();
     } else {

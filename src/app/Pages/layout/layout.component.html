@@ -5,12 +5,20 @@
       <img [src]="logoUrl" alt="" />
       <div class="title">PRO Gamify</div>
     </div>
-    <div>
-      <pro-gamification
-        [userId]="gamificationUserId"
-        [applicationId]="gamificationAppId"
-        [themeColor]="'secondary'"
-      ></pro-gamification>
+    <div class="profile-container">
+      <div class="trips-container">
+        <div class="trip-text" (click)="showTrips()">My Trips</div>
+        <div class="trip-container" *ngIf="showTripContainer">
+          <app-trips (closeContainer)="closeContianer()"></app-trips>
+        </div>
+      </div>
+      <div>
+        <pro-gamification
+          [userId]="gamificationUserId"
+          [applicationId]="gamificationAppId"
+          [themeColor]="'secondary'"
+        ></pro-gamification>
+      </div>
     </div>
   </div>
   <div class="empty-container"></div>

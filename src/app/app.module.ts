@@ -11,6 +11,11 @@ import { OfferComponent } from './Components/offer/offer.component';
 import { BusDetailComponent } from './Components/bus-detail/bus-detail.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { environment } from '../environments/environment';
+import { TripsComponent } from './Components/trips/trips.component';
+import { RatingComponent } from './Pages/rating/rating.component';
+import { StarRatingModule } from 'angular-star-rating';
+import { StarRatingComponent } from './Components/star-rating/star-rating.component';
+import { ModalComponent } from './Components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +26,10 @@ import { environment } from '../environments/environment';
     OfferComponent,
     BusDetailComponent,
     FooterComponent,
+    TripsComponent,
+    RatingComponent,
+    StarRatingComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +39,7 @@ import { environment } from '../environments/environment';
     ProGamificationModule.forRoot({
       gamificationApiUrl: `https://stage-gamificationapi.theproindia.com/tokens/sandbox/${environment?.clientId}/${environment.clientSecret}`,
     }),
+    StarRatingModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Gamification } from '@theproindia/pro-gamification';
 import { environment } from '../../../environments/environment';
+import { ModalService } from '../../Services/modal.service';
 
 @Component({
   selector: 'app-bus-detail',
@@ -8,7 +9,10 @@ import { environment } from '../../../environments/environment';
   styleUrls: ['./bus-detail.component.css'],
 })
 export class BusDetailComponent implements OnInit {
-  constructor(public gamification: Gamification) {}
+  constructor(
+    public gamification: Gamification,
+    public modalService: ModalService
+  ) {}
   @Input() busDetails: any;
 
   togglePaymet: boolean = false;
@@ -31,6 +35,12 @@ export class BusDetailComponent implements OnInit {
       '',
       ''
     );
+    this.modalService.modalStateData.next({
+      headerText: 'Booked Successfully',
+      pointsText: 'Points',
+      points: '20',
+    });
+    this.modalService.openModal();
   }
   togglePayment() {
     this.togglePaymet = !this.togglePaymet;

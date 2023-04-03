@@ -8,7 +8,8 @@
 .title-section {
   display: flex;
   align-items: center;
-  padding: 1em 0em;
+  padding-top: 5em;
+  margin-bottom: 1em;
 }
 .container-decoration {
   width: 100%;

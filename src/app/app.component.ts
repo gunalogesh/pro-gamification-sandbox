@@ -1,5 +1,4 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
-import { ModalComponent } from './Components/modal/modal.component';
 import { ModalService } from './Services/modal.service';
 
 @Component({

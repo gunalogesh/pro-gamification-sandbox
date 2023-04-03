@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ModalService } from 'src/app/Services/modal.service';
-import { TicketService } from 'src/app/Services/ticket.service';
+import { ModalService } from '../../Services/modal.service';
+import { TicketService } from '../../Services/ticket.service';
 
 @Component({
   selector: 'app-rating',

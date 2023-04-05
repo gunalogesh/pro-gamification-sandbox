@@ -9,11 +9,11 @@
         <div class="small-text">Rate your Experience</div>
         <app-star-rating
           [maxRating]="5"
-          [currentRating]="3"
+          [currentRating]="0"
           (ratingUpdated)="onRatingUpdated($event)"
         ></app-star-rating>
       </div>
-      <hr />
+      <hr class="separator-feedback" />
       <div class="rating-textarea">
         <div class="small-text">Add Detailed Review</div>
         <textarea
@@ -21,7 +21,7 @@
           name=""
           id=""
           cols="30"
-          rows="10"
+          rows="5"
         ></textarea>
         <small *ngIf="showErrorText">Please Provide Rating and Feedback</small>
         <div class="submit-button-container">

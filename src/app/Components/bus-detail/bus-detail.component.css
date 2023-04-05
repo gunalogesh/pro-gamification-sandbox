@@ -71,6 +71,9 @@
   align-items: center;
   padding: 1.625em;
 }
+.bus-fare-detail-mobile {
+  display: none;
+}
 
 .bus-fare {
   font-size: 1.25em;
@@ -86,7 +89,6 @@
 .confirm-section {
   margin-top: 1em;
   border-top: 1px solid #dedede;
-  height: 30em;
   background-color: #ebeaea;
 }
 
@@ -94,22 +96,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1.625em;
+  padding: 1.625em;
+  min-width: max-content;
 }
 
 .seat-selection {
   height: 26em;
-  width: 26em;
+  width: 50%;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .payment {
-  height: 26em;
-  width: 26em;
   background: #fff 0 0 no-repeat padding-box;
   border: 1px solid #dedede;
   border-radius: 0.625em;
+  min-width: 40%;
 }
 
 .boarding {
@@ -238,4 +240,101 @@
 
 .place-container.end:after {
   left: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .bus-detail-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 1em;
+    gap: 1em;
+  }
+  .bus-fare-detail {
+    display: none;
+  }
+  .bus-name-detail {
+    min-width: max-content;
+    margin-left: 0.5em;
+  }
+  .bus-name-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bus-fare-detail-mobile {
+    margin-right: 0.5em;
+  }
+  .timing-wrap {
+    min-width: 75%;
+  }
+  .bus-name {
+    padding: 0;
+  }
+  .payment-container {
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+  }
+  .bus-fare-detail-mobile {
+    display: block;
+  }
+  .seat-selection {
+    height: 15em;
+    width: 100%;
+  }
+  .confirm-button {
+    width: 100%;
+    text-align: center;
+    padding: 0.625em 1.5em;
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .bus-detail-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 1em;
+    gap: 1em;
+  }
+  .bus-fare-detail {
+    display: none;
+  }
+  .bus-name-detail {
+    min-width: max-content;
+    margin-left: 0.5em;
+  }
+  .bus-name-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bus-fare-detail-mobile {
+    margin-right: 0.5em;
+  }
+  .timing-wrap {
+    min-width: 50%;
+  }
+  .bus-name {
+    padding: 0;
+  }
+  .payment-container {
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+  }
+  .bus-fare-detail-mobile {
+    display: block;
+  }
+  .seat-selection {
+    height: 15em;
+  }
+  .confirm-button {
+    width: 100%;
+    text-align: center;
+    padding: 0.625em 1.5em;
+    font-size: 0.8em;
+  }
 }

@@ -30,7 +30,7 @@
   margin-top: 2em;
 }
 .rating-container {
-  width: 30em;
+  min-width: 30em;
   min-height: 35em;
 }
 .rating-star {
@@ -67,7 +67,7 @@ textarea {
   background: #ffa600 0% 0% no-repeat padding-box;
   border-radius: 3.125em;
   padding: 0.8em 1.5em;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.5em;
   cursor: pointer;
 }
@@ -97,4 +97,60 @@ textarea {
 hr {
   width: 100%;
   border: 1px solid #dedede;
+}
+
+@media only screen and (max-width: 480px) {
+  .rating-wrap {
+    flex-direction: column-reverse;
+    gap: 1em;
+    width: none;
+  }
+  .rating-container {
+    min-width: 0;
+  }
+  .trip-container {
+    min-width: 0;
+  }
+  .submit-button {
+    width: 100%;
+    text-align: center;
+    padding: 0.5em 1em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .rating-wrap {
+    flex-direction: column-reverse;
+    gap: 1em;
+    width: none;
+  }
+  .rating-container {
+    min-width: 0;
+  }
+  .trip-container {
+    min-width: 0;
+  }
+  .submit-button {
+    width: 100%;
+    text-align: center;
+    padding: 0.5em 1em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .rating-wrap {
+    flex-direction: column-reverse;
+    gap: 1em;
+    width: none;
+  }
+  .rating-container {
+    min-width: 0;
+  }
+  .trip-container {
+    min-width: 0;
+  }
+  .submit-button {
+    width: 100%;
+    text-align: center;
+    padding: 0.5em 1em;
+    font-weight: 500;
+  }
 }

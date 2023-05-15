@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './Pages/layout/layout.component';
 import { ConfirmDialogComponent } from './Components/confirm-dialog/confirm-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProGamificationModule } from '@theproindia/pro-gamification';
+import { ProGamificationModule } from 'pro-gamification';
 import { BookTicketComponent } from './Components/book-ticket/book-ticket.component';
 import { OfferComponent } from './Components/offer/offer.component';
 import { BusDetailComponent } from './Components/bus-detail/bus-detail.component';

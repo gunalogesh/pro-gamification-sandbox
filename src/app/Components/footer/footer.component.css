@@ -17,6 +17,10 @@ ul {
   padding: 0 !important;
   margin: 0 !important;
 }
+.appversion {
+  text-align: center;
+  color: #d5d5d5;
+}
 
 @media only screen and (max-width: 480px) {
   .product-links {

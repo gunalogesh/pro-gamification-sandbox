@@ -1,4 +1,5 @@
 export const environment = {
+  appVersion: require('../../package.json').version + '-dev',
   production: false,
   clientId: '887ddc99-b193-43ad-aa42-31510be0f9de',
   clientSecret: 'MWUyNWY4MDMtOWE1Zi00Y2E2LTlhYjAtYThkYTA3YjNhOWZi',

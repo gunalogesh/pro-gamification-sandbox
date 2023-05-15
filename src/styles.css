@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  background-color: #f7f5f5;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.flex-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.grey-text {
+  color: #656565;
+}

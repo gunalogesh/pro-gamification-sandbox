@@ -1,0 +1,11 @@
+.star-rating {
+  font-size: 3rem;
+}
+.star {
+  font-size: inherit;
+  cursor: pointer;
+  color: #c7c7c7;
+}
+.star.full {
+  color: #ffa600;
+}

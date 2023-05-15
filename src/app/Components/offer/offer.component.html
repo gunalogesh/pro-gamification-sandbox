@@ -1,0 +1,17 @@
+<div class="offer-container">
+  <div
+    class="offer-image-container"
+    [style.backgroundImage]="'url(' + offer['imageSource'] + sasToken + ')'"
+  ></div>
+  <div class="offer-text-container">
+    <div>
+      <div class="offer-title">{{ offer["title"] }}</div>
+      <div class="offer-sub-title">
+        {{ offer["subTitle"] }}
+      </div>
+    </div>
+    <div>
+      <div class="offer-button">Book Now ></div>
+    </div>
+  </div>
+</div>

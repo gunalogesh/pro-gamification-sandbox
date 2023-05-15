@@ -10,12 +10,12 @@ import { BookTicketComponent } from './Components/book-ticket/book-ticket.compon
 import { OfferComponent } from './Components/offer/offer.component';
 import { BusDetailComponent } from './Components/bus-detail/bus-detail.component';
 import { FooterComponent } from './Components/footer/footer.component';
-import { environment } from '../environments/environment';
 import { TripsComponent } from './Components/trips/trips.component';
 import { RatingComponent } from './Pages/rating/rating.component';
 import { StarRatingModule } from 'angular-star-rating';
 import { StarRatingComponent } from './Components/star-rating/star-rating.component';
 import { ModalComponent } from './Components/modal/modal.component';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { ModalComponent } from './Components/modal/modal.component';
     FormsModule,
     ReactiveFormsModule,
     ProGamificationModule.forRoot({
-      gamificationApiUrl: `https://stage-gamificationapi.theproindia.com/tokens/sandbox/${environment?.clientId}/${environment.clientSecret}`,
+      gamificationApiUrl: `${environment.baseUrl}/tokens/sandbox/${environment.clientId}/${environment.clientSecret}`,
     }),
     StarRatingModule.forRoot(),
   ],

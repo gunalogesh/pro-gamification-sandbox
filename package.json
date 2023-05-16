@@ -1,6 +1,6 @@
 {
   "name": "sandbox-gamification-angular",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --disbale-host-check",
@@ -22,13 +22,10 @@
     "angular-star-rating": "^6.0.0",
     "css-star-rating": ">=1.3.1",
     "jwt-decode": "^3.1.2",
-    "pro-gamification": "npm:@stagetheproindia/pro-gamification@^1.0.9",
+    "@stagetheproindia/pro-gamification": "1.0.9",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
-  },
-  "alias": {
-    "pro-gamification": "@stagetheproindia/pro-gamification"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.2",

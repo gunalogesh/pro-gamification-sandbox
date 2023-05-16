@@ -1,5 +1,8 @@
+import packageJson from '../../package.json';
+
 export const environment = {
-  appVersion: require('../../package.json').version + '-dev',
+  appVersion: packageJson.version + '-dev',
+
   production: false,
   baseUrl: 'https://stage-gamificationapi.theproindia.com',
   blobEndpoint: 'https://stagegamificationui.blob.core.windows.net',

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
-
+import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-book-ticket',
   templateUrl: './book-ticket.component.html',

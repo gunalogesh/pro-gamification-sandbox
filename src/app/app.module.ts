@@ -15,7 +15,7 @@ import { RatingComponent } from './Pages/rating/rating.component';
 import { StarRatingModule } from 'angular-star-rating';
 import { StarRatingComponent } from './Components/star-rating/star-rating.component';
 import { ModalComponent } from './Components/modal/modal.component';
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [

@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './Pages/layout/layout.component';
 import { ConfirmDialogComponent } from './Components/confirm-dialog/confirm-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProGamificationModule } from '@stagetheproindia/pro-gamification';
 import { BookTicketComponent } from './Components/book-ticket/book-ticket.component';
 import { OfferComponent } from './Components/offer/offer.component';
 import { BusDetailComponent } from './Components/bus-detail/bus-detail.component';
@@ -16,6 +15,7 @@ import { StarRatingModule } from 'angular-star-rating';
 import { StarRatingComponent } from './Components/star-rating/star-rating.component';
 import { ModalComponent } from './Components/modal/modal.component';
 import { environment } from '../environments/environment';
+import { ProGamificationModule } from '@stagetheproindia/pro-gamification';
 
 @NgModule({
   declarations: [

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-book-ticket',
   templateUrl: './book-ticket.component.html',
@@ -7,43 +7,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookTicketComponent implements OnInit {
   constructor() {}
-
+  containerName = environment.containerName;
+  blobEndPoint = environment.blobEndpoint;
   offers: any = [
     {
       title: 'Grab up to 10% offer',
       subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
-      imageSource:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image1.png',
+      imageSource: `${this.blobEndPoint}/${this.containerName}/image1.png`,
     },
     {
       title: 'Grab FLAT 8% OFF* on HDFC Credit Card',
       subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
-      imageSource:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image2.png',
+      imageSource: `${this.blobEndPoint}/${this.containerName}/image2.png`,
     },
     {
       title: 'Grab up to 10% offer',
       subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
-      imageSource:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image3.png',
+      imageSource: `${this.blobEndPoint}/${this.containerName}/image3.png`,
     },
     {
       title: 'Avail the offers with Rupay Credit Cards',
       subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
-      imageSource:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image4.png',
+      imageSource: `${this.blobEndPoint}/${this.containerName}/image4.png`,
     },
     {
       title: 'Now get up to 15% OFF* on flights, stays, cabs & buses',
       subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
-      imageSource:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image5.png',
+      imageSource: `${this.blobEndPoint}/${this.containerName}/image5.png`,
     },
     {
       title: 'Grab up to 10% offer',
       subTitle: 'on domestic hotels, outstation cabs & bus bookings.',
-      imageSource:
-        'https://stagegamificationui.blob.core.windows.net/sandbox-assets/image6.png',
+      imageSource: `${this.blobEndPoint}/${this.containerName}/image6.png`,
     },
   ];
 

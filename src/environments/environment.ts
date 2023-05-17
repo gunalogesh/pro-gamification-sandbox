@@ -1,11 +1,17 @@
+import packageJson from '../../package.json';
+
 export const environment = {
-  appVersion: require('../../package.json').version + '-dev',
+  appVersion: packageJson.version + '-dev',
+
   production: false,
-  clientId: '887ddc99-b193-43ad-aa42-31510be0f9de',
-  clientSecret: 'MWUyNWY4MDMtOWE1Zi00Y2E2LTlhYjAtYThkYTA3YjNhOWZi',
+  baseUrl: 'https://gamifyapi.theproindia.com',
+  blobEndpoint: 'https://prodgamificationui.blob.core.windows.net',
+  containerName: 'sandbox-assets',
+  clientId: 'e7742fd0-da06-47ba-a6e8-96936cc7cbf9',
+  clientSecret: 'MGYzNTkyYzktMDU1MS00N2IzLWE4ZjEtMDQ3Mjg4ZTNmMjE5',
   gamification: {
-    userId: '06ba5757-d655-4716-b719-ecc069a6ccce',
-    gameId: '64294f559d6bdc2368a24a29',
-    applicationId: '64294f559d6bdcf518a24a22',
+    userId: 'a0012e4d-83ef-4c05-9464-dd5e8f3cc649',
+    gameId: '6462467bd524285dc1ff1291',
+    applicationId: '6462449bd524281bcbff1272',
   },
 };

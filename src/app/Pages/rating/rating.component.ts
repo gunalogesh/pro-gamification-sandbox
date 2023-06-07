@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ModalService } from '../../Services/modal.service';
 import { TicketService } from '../../Services/ticket.service';
+//Import the Gamification service
 
 @Component({
   selector: 'app-rating',
@@ -13,6 +14,7 @@ export class RatingComponent implements OnInit {
     public activatedRoute: ActivatedRoute,
     public ticketService: TicketService,
     public modalService: ModalService
+//Paste here Gamification service Constructor 
   ) {}
   showErrorText: boolean = false;
   ticketId: string = '';
@@ -39,6 +41,7 @@ export class RatingComponent implements OnInit {
         pointsText: 'Points',
         points: '25',
       });
+      //Paste here the Gamification admin penal credentials 
       this.modalService.openModal();
     } else {
       this.showErrorText = true;

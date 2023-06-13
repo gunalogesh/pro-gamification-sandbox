@@ -2,8 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ModalService } from '../../Services/modal.service';
 import { TicketService } from '../../Services/ticket.service';
-//Import the Gamification service
-
+import { Gamification } from '@stagetheproindia/pro-gamification';
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
@@ -13,8 +12,8 @@ export class RatingComponent implements OnInit {
   constructor(
     public activatedRoute: ActivatedRoute,
     public ticketService: TicketService,
-    public modalService: ModalService
-//Paste here Gamification service Constructor 
+    public modalService: ModalService,
+    public gamification: Gamification
   ) {}
   showErrorText: boolean = false;
   ticketId: string = '';

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Gamification } from '@theproindia/pro-gamification';
 import { ModalService } from '../../Services/modal.service';
 import { TicketService } from '../../Services/ticket.service';
 
@@ -12,7 +13,8 @@ export class RatingComponent implements OnInit {
   constructor(
     public activatedRoute: ActivatedRoute,
     public ticketService: TicketService,
-    public modalService: ModalService
+    public modalService: ModalService,
+    public gamification: Gamification
   ) {}
   showErrorText: boolean = false;
   ticketId: string = '';

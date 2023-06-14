@@ -10,9 +10,9 @@ export const environment = {
   clientId: '887ddc99-b193-43ad-aa42-31510be0f9de',
   clientSecret: 'MWUyNWY4MDMtOWE1Zi00Y2E2LTlhYjAtYThkYTA3YjNhOWZi',
   //Paste your code in gamification object
-  gamification: {
-    userId: '06ba5757-d655-4716-b719-ecc069a6ccce',
-    gameId: '64294f559d6bdc2368a24a29',
-    applicationId: '64294f559d6bdcf518a24a22',
+    gamification: {
+    userId: '5c7e0e6d-b379-4f5d-a0bd-6a9210b69078',
+    gameId: '64894a340c6b3d6d0a4aca6c',
+    applicationId: '64894a330c6b3d943b4aca64',
   },
 };

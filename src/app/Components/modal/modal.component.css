@@ -1,11 +1,11 @@
 .container {
   width: 25em;
   height: 25em;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.75);
+  overflow: auto;
   margin: auto;
   border: 1px solid #dedede;
   background: #ffffff 0% 0% no-repeat padding-box;

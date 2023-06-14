@@ -2,6 +2,9 @@
   padding-top: 5em;
   margin-bottom: 10em;
 }
+.grey-text {
+  color: #656565;
+}
 .large-text {
   font-size: 1.5em;
   font-weight: bold;

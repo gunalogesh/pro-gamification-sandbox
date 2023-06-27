@@ -1,4 +1,4 @@
-<header>
+<header style="font-family: sans-serif;">
   <div class="empty-container"></div>
   <div class="header-content">
     <div class="brand-container">
@@ -24,13 +24,15 @@
   </div>
   <div class="empty-container"></div>
 </header>
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
-<footer>
-  <div class="empty-container"></div>
-  <div class="footer-content">
-    <app-footer></app-footer>
+<body>
+  <div class="container">
+    <router-outlet></router-outlet>
   </div>
-  <div class="empty-container"></div>
-</footer>
+  <footer>
+    <div class="empty-container"></div>
+    <div class="footer-content">
+      <app-footer></app-footer>
+    </div>
+    <div class="empty-container"></div>
+  </footer>
+</body>

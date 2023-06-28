@@ -9,7 +9,7 @@
         <div class="small-text">Rate your Experience</div>
         <app-star-rating
           [maxRating]="5"
-          [currentRating]="0"
+          [currentRating]="rating"
           (ratingUpdated)="onRatingUpdated($event)"
         ></app-star-rating>
       </div>

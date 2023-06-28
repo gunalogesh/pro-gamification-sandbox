@@ -39,7 +39,7 @@ export class RatingComponent implements OnInit {
         headerText: 'Glad you Like it',
         pointsText: 'Points',
         points: '25',
-      });
+      });      
       //Paste here the Gamification admin penal credentials 
       this.modalService.openModal();
     } else {
@@ -52,5 +52,6 @@ export class RatingComponent implements OnInit {
   resetForm() {
     this.showErrorText = false;
     this.feedback = '';
+    this.rating = 0;
   }
 }

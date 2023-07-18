@@ -36,20 +36,7 @@ export class RatingComponent implements OnInit {
   async addReview() {
     if (this.rating && this.feedback) {
       this.resetForm();
-      //Replace the game action credentials
-      this.rewardPoints = await this.gamification.updateGameAction(
-        '964b4a74-bef5-4fd8-abe3-c5a34468f8db',
-        '648962ddad55c3f2c1b8678c',
-        '',
-        ''
-      );
-      this.modalService.modalStateData.next({
-        headerText: 'Glad you Like it',
-        pointsText: 'Points',
-        points: this.rewardPoints?.points,
-      });
-
-      this.modalService.openModal();
+      //Paste the copied code here
     } else {
       this.showErrorText = true;
     }

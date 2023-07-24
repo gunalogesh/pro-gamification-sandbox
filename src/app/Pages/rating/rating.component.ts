@@ -19,6 +19,7 @@ export class RatingComponent implements OnInit {
   ticketId: string = '';
   tripDetails: any;
   trip: any;
+  rewardPoints: any;
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
       this.ticketId = params['ticketId'];
@@ -32,16 +33,10 @@ export class RatingComponent implements OnInit {
   rating = 0;
   feedback = '';
 
-  addReview() {
+   addReview() {
     if (this.rating && this.feedback) {
       this.resetForm();
-      this.modalService.modalStateData.next({
-        headerText: 'Glad you Like it',
-        pointsText: 'Points',
-        points: '25',
-      });      
-      //Paste here the Gamification admin panel credentials 
-      this.modalService.openModal();
+      //Paste the copied code here
     } else {
       this.showErrorText = true;
     }

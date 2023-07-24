@@ -40,7 +40,7 @@ export class RatingComponent implements OnInit {
         pointsText: 'Points',
         points: '25',
       });      
-      //Paste here the Gamification admin penal credentials 
+      //Paste here the Gamification admin panel credentials 
       this.modalService.openModal();
     } else {
       this.showErrorText = true;

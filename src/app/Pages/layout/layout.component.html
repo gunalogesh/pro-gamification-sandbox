@@ -7,7 +7,7 @@
     </div>
     <div class="profile-container">
       <div class="trips-container">
-        <div class="trip-text" (click)="showTrips()">My Trips</div>
+        <button class="trip-text" clickOutside (clickOutside)="closeContianer()" (click)="showTrips()">My Trips</button>
         <div class="trip-container" *ngIf="showTripContainer">
           <app-trips (closeContainer)="closeContianer()"></app-trips>
         </div>

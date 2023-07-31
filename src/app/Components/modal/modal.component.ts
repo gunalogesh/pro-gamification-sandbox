@@ -12,7 +12,7 @@ export class ModalComponent implements OnInit {
   ngOnInit(): void {
     this.modalService.modalStateData.subscribe((data: any) => {
       this.modelData = { ...data };
-      this.createConfetti();
+      this.createPopup();
     });
   }
   modelData = {
@@ -23,7 +23,7 @@ export class ModalComponent implements OnInit {
   closeModal() {
     this.modalService.closeModal();
   }
-  createConfetti() {
+  createPopup() {
     const confirmButton = document.getElementById('popUp');
     if (confirmButton) {
       party.confetti(confirmButton, {

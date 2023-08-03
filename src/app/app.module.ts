@@ -16,6 +16,7 @@ import { StarRatingComponent } from './Components/star-rating/star-rating.compon
 import { ModalComponent } from './Components/modal/modal.component';
 import { ProGamificationModule } from '@stagetheproindia/pro-gamification';
 import { environment } from 'src/environments/environment';
+import { ClickOutsideDirective } from './click-outside.directive';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { environment } from 'src/environments/environment';
     RatingComponent,
     StarRatingComponent,
     ModalComponent,
+    ClickOutsideDirective,
   ],
   imports: [
     BrowserModule,

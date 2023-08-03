@@ -14,8 +14,8 @@ import { RatingComponent } from './Pages/rating/rating.component';
 import { StarRatingModule } from 'angular-star-rating';
 import { StarRatingComponent } from './Components/star-rating/star-rating.component';
 import { ModalComponent } from './Components/modal/modal.component';
-import { environment } from '../environments/environment';
 import { ProGamificationModule } from '@stagetheproindia/pro-gamification';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,8 @@ import { ProGamificationModule } from '@stagetheproindia/pro-gamification';
     FormsModule,
     ReactiveFormsModule,
     ProGamificationModule.forRoot({
-      gamificationApiUrl: `${environment.baseUrl}/tokens/sandbox/${environment.clientId}/${environment.clientSecret}`,
+      clientId: environment.clientId,
+      clientSecret: environment.clientSecret,
     }),
     StarRatingModule.forRoot(),
   ],

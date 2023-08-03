@@ -7,12 +7,12 @@ export const environment = {
   baseUrl: 'https://stage-gamificationapi.theproindia.com',
   blobEndpoint: 'https://stagegamificationui.blob.core.windows.net',
   containerName: 'sandbox-assets',
-  clientId: '887ddc99-b193-43ad-aa42-31510be0f9de',
-  clientSecret: 'MWUyNWY4MDMtOWE1Zi00Y2E2LTlhYjAtYThkYTA3YjNhOWZi',
+  clientId: '08ce0068-2906-44d4-b840-b268e5511624',
+  clientSecret: '2BG8Q~Vsd33.QQ93jcejZkrr5aVyXvxbl_FrubYg',
   //Paste your code in gamification object
   gamification: {
-    userId: '964b4a74-bef5-4fd8-abe3-c5a34468f8db',
-    gameId: '648962ddad55c3f2c1b8678c',
-    applicationId: '648962dcad55c30bb4b8677c',
+    userId: '6b40a8ec-6046-4fdf-8a07-9c5f8aba4e8a',
+    gameId: '64c6645e7cb0ce6020901a71',
+    applicationId: '64c6645b7cb0ce6020901a4e',
   },
 };

@@ -37,7 +37,8 @@ import { environment } from '../environments/environment';
     FormsModule,
     ReactiveFormsModule,
     ProGamificationModule.forRoot({
-      gamificationApiUrl: `${environment.baseUrl}/tokens/sandbox/${environment.clientId}/${environment.clientSecret}`,
+      clientId: environment.clientId,
+      clientSecret: environment.clientSecret,
     }),
     StarRatingModule.forRoot(),
   ],

@@ -16,6 +16,7 @@ import { StarRatingModule } from 'angular-star-rating';
 import { StarRatingComponent } from './Components/star-rating/star-rating.component';
 import { ModalComponent } from './Components/modal/modal.component';
 import { environment } from '../environments/environment';
+import { ClickOutsideDirective } from './click-outside.directive';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { environment } from '../environments/environment';
     RatingComponent,
     StarRatingComponent,
     ModalComponent,
+    ClickOutsideDirective,
   ],
   imports: [
     BrowserModule,

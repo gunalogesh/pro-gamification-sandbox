@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from '../../Services/modal.service';
 import { TicketService } from '../../Services/ticket.service';
 import { Gamification } from 'pro-gamification';
@@ -9,11 +9,13 @@ import { Gamification } from 'pro-gamification';
   styleUrls: ['./rating.component.css'],
 })
 export class RatingComponent implements OnInit {
+  @Output() closeContainer = new EventEmitter<boolean>()
   constructor(
     public activatedRoute: ActivatedRoute,
     public ticketService: TicketService,
     public modalService: ModalService,
-    public gamification: Gamification
+    public gamification: Gamification,
+    public route: Router
   ) {}
   showErrorText: boolean = false;
   ticketId: string = '';
@@ -48,5 +50,9 @@ export class RatingComponent implements OnInit {
     this.showErrorText = false;
     this.feedback = '';
     this.rating = 0;
+  }
+   openHomePage() {
+    this.closeContainer.emit(false);
+    this.route.navigateByUrl('/book-ticket');
   }
 }

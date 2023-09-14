@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ModalService } from '../../Services/modal.service';
 import { TicketService } from '../../Services/ticket.service';
-import { Gamification } from '@stagetheproindia/pro-gamification';
+import { Gamification } from 'pro-gamification';
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',

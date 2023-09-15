@@ -22,8 +22,9 @@ export class CodeChangeService {
 
     if (oldCode[key]?.length >= 0) {
       let lastIndex = oldCode[key]?.length - 1;
-
-      if (newCode?.userId == oldCode[key][lastIndex - 1]?.userId) {
+      let current = JSON.stringify(newCode);
+      let previous = JSON.stringify(oldCode[key][lastIndex - 1]);
+      if (current === previous) {
         return false;
       }
     }
@@ -32,17 +33,17 @@ export class CodeChangeService {
   }
   trackCode(newCode: any, key: string) {
     let oldCode = JSON.parse(sessionStorage.getItem('codeChanges') ?? '{}');
-    const a = this.codeChanged(key, newCode);
+    const isCodeChanged = this.codeChanged(key, newCode);
     console.log(newCode);
     console.log(oldCode);
 
-    if (newCode && oldCode && a) {
+    if (newCode && oldCode && isCodeChanged) {
       oldCode[key]?.length
         ? oldCode[key].push(newCode)
         : (oldCode[key] = [newCode]);
       sessionStorage.setItem('codeChanges', JSON.stringify(oldCode));
     }
 
-    return a;
+    return isCodeChanged;
   }
 }

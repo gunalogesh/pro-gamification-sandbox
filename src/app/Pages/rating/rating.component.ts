@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from '../../Services/modal.service';
 import { TicketService } from '../../Services/ticket.service';
 import { Gamification } from '@stagetheproindia/pro-gamification';
+import { CodeChangeService } from 'src/app/Services/code-change.service';
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
@@ -15,7 +16,8 @@ export class RatingComponent implements OnInit {
     public ticketService: TicketService,
     public modalService: ModalService,
     public gamification: Gamification,
-    public route: Router
+    public route: Router,
+    private codeChangeService: CodeChangeService
   ) {}
   showErrorText: boolean = false;
   ticketId: string = '';

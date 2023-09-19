@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class ModalService {
-  modalState = new BehaviorSubject(false);
+  modalState = new BehaviorSubject<boolean>(false);
   modalStateData = new BehaviorSubject({
     headerText: '',
     pointsText: '',

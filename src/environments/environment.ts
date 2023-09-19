@@ -1,4 +1,3 @@
-import { trackCode } from '../app/utils/helper';
 import packageJson from '../../package.json';
 export const environment = {
   appVersion: packageJson.version,
@@ -11,7 +10,7 @@ export const environment = {
   clientSecret: '2BG8Q~Vsd33.QQ93jcejZkrr5aVyXvxbl_FrubYg',
   //Paste your code in gamification object
   gamification: {
-    userId: 'abirami',
+    userId: 'Pooja',
     gameId: '64c6645e7cb0ce6020901a71',
     applicationId: '64c6645b7cb0ce6020901a4e',
   },

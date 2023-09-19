@@ -1,4 +1,3 @@
-// code-change.service.ts
 import { Injectable } from '@angular/core';
 import { ModalService } from './modal.service';
 import { BehaviorSubject } from 'rxjs';
@@ -14,20 +13,13 @@ export class CodeChangeService {
   ) {}
   codeChangeNotifier = new BehaviorSubject<boolean>(false);
 
-  // detectCodeChangeOrSave() {
-  //   this.modalService.modalStateData.next({
-  //     headerText: 'Booked Successfully',
-  //     pointsText: 'Points',
-  //     points: '100',
-  //   });
-  //   this.modalService.openModal();
-  // }
   codeChanged(key: string, newCode: string, oldCode: any) {
     let lastIndex = oldCode[key]?.length - 1;
     let current = newCode;
-    let previous = JSON.stringify(oldCode[key][lastIndex]);
+    let previous = oldCode[key][lastIndex];
     if (current === previous) {
       oldCode[key].push(newCode);
+      sessionStorage.setItem('codeChanges', JSON.stringify(oldCode));
       return false;
     }
 
@@ -51,8 +43,6 @@ export class CodeChangeService {
     } else if (oldCode[key]?.length >= 1) {
       return this.codeChanged(key, newCode, oldCode);
     }
-
-    
 
     return true;
   }

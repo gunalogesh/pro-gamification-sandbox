@@ -1,4 +1,4 @@
-import { CodeChangeService } from 'src/app/Services/code-change.service';
+import { CodeChangeService } from '../../Services/code-change.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from '../../Services/modal.service';
@@ -46,19 +46,12 @@ export class RatingComponent implements OnInit {
     if (this.rating && this.feedback) {
       this.resetForm();
       //Paste the copied code here
-      this.gamification.updateGameAction(
-        environment.gamification.userId,
-        environment.gamification.gameId,
-        '',
-        ''
-      );
     } else {
       this.showErrorText = true;
     }
   }
   onRatingUpdated(rating: number): void {
     this.rating = rating;
-    console.log(this.addReview.toString());
   }
   resetForm() {
     this.showErrorText = false;

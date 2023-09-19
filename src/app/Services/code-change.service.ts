@@ -16,34 +16,36 @@ export class CodeChangeService {
     });
     this.modalService.openModal();
   }
-  codeChanged(key: string, newCode: any) {
-    let oldCode = JSON.parse(sessionStorage.getItem('codeChanges') ?? '{}');
-    console.log(sessionStorage.getItem('codeChanges'));
-
-    if (oldCode[key]?.length >= 0) {
-      let lastIndex = oldCode[key]?.length - 1;
-      let current = JSON.stringify(newCode);
-      let previous = JSON.stringify(oldCode[key][lastIndex - 1]);
-      if (current === previous) {
-        return false;
-      }
+  codeChanged(key: string, newCode: any, oldCode: any) {
+    let lastIndex = oldCode[key]?.length - 1;
+    let current = JSON.stringify(newCode);
+    let previous = JSON.stringify(oldCode[key][lastIndex]);
+    if (current === previous) {
+      oldCode[key].push(newCode);
+      return false;
     }
+
     this.detectCodeChangeOrSave();
+    oldCode[key].push(newCode);
+    sessionStorage.setItem('codeChanges', JSON.stringify(oldCode));
+    console.log('code changed');
+
     return true;
   }
+
   trackCode(newCode: any, key: string) {
     let oldCode = JSON.parse(sessionStorage.getItem('codeChanges') ?? '{}');
-    const isCodeChanged = this.codeChanged(key, newCode);
-    console.log(newCode);
-    console.log(oldCode);
 
-    if (newCode && oldCode && isCodeChanged) {
-      oldCode[key]?.length
-        ? oldCode[key].push(newCode)
-        : (oldCode[key] = [newCode]);
+    if (!oldCode[key]?.length) {
+      oldCode[key] = [];
+      oldCode[key].push(newCode);
       sessionStorage.setItem('codeChanges', JSON.stringify(oldCode));
+
+      return false;
+    } else if (oldCode[key]?.length >= 1) {
+      return this.codeChanged(key, newCode, oldCode);
     }
 
-    return isCodeChanged;
+    return true;
   }
 }

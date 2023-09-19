@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from '../../../environments/environment';
-import { trackCode } from 'src/app/utils/helper';
 import { CodeChangeService } from 'src/app/Services/code-change.service';
 
 @Component({
@@ -14,6 +13,8 @@ export class LayoutComponent implements OnInit {
   logoUrl = `${environment.blobEndpoint}/${environment.containerName}/flag.svg?sv=2021-10-04&si=sandbox-assets-18674F72D96&sr=c&sig=rKjuSXkKkvZGBsbvSQEBAPdiHxKqfQ7U2s1I8Na%2FaE8%3D`;
   showTripContainer = false;
   constructor(private codeChangeService: CodeChangeService) {
+    console.log();
+
     this.codeChangeService.trackCode(environment.gamification, 'userDetails');
   }
 

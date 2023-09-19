@@ -4,6 +4,7 @@ import { ModalService } from '../../Services/modal.service';
 import { TicketService } from '../../Services/ticket.service';
 import { Gamification } from '@stagetheproindia/pro-gamification';
 import { CodeChangeService } from 'src/app/Services/code-change.service';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
@@ -41,6 +42,12 @@ export class RatingComponent implements OnInit {
     if (this.rating && this.feedback) {
       this.resetForm();
       //Paste the copied code here
+      this.gamification.updateGameAction(
+        environment.gamification.userId,
+        environment.gamification.gameId,
+        '',
+        ''
+      );
     } else {
       this.showErrorText = true;
     }

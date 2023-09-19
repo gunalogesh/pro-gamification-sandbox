@@ -14,14 +14,14 @@ export class CodeChangeService {
   ) {}
   codeChangeNotifier = new BehaviorSubject<boolean>(false);
 
-  detectCodeChangeOrSave() {
-    this.modalService.modalStateData.next({
-      headerText: 'Booked Successfully',
-      pointsText: 'Points',
-      points: '100',
-    });
-    this.modalService.openModal();
-  }
+  // detectCodeChangeOrSave() {
+  //   this.modalService.modalStateData.next({
+  //     headerText: 'Booked Successfully',
+  //     pointsText: 'Points',
+  //     points: '100',
+  //   });
+  //   this.modalService.openModal();
+  // }
   codeChanged(key: string, newCode: string, oldCode: any) {
     let lastIndex = oldCode[key]?.length - 1;
     let current = newCode;
@@ -31,6 +31,7 @@ export class CodeChangeService {
       return false;
     }
 
+    this.toasterService.show('success', '', 'Code pasted successfully');
     this.codeChangeNotifier.next(true);
     oldCode[key].push(newCode);
     sessionStorage.setItem('codeChanges', JSON.stringify(oldCode));
@@ -51,7 +52,7 @@ export class CodeChangeService {
       return this.codeChanged(key, newCode, oldCode);
     }
 
-    this.toasterService.show('success', '', 'Code pasted successfully');
+    
 
     return true;
   }

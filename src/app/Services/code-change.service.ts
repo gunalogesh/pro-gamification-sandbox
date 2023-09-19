@@ -16,9 +16,9 @@ export class CodeChangeService {
     });
     this.modalService.openModal();
   }
-  codeChanged(key: string, newCode: any, oldCode: any) {
+  codeChanged(key: string, newCode: string, oldCode: any) {
     let lastIndex = oldCode[key]?.length - 1;
-    let current = JSON.stringify(newCode);
+    let current = newCode;
     let previous = JSON.stringify(oldCode[key][lastIndex]);
     if (current === previous) {
       oldCode[key].push(newCode);
@@ -28,12 +28,11 @@ export class CodeChangeService {
     this.detectCodeChangeOrSave();
     oldCode[key].push(newCode);
     sessionStorage.setItem('codeChanges', JSON.stringify(oldCode));
-    console.log('code changed');
 
     return true;
   }
 
-  trackCode(newCode: any, key: string) {
+  trackCode(newCode: string, key: string) {
     let oldCode = JSON.parse(sessionStorage.getItem('codeChanges') ?? '{}');
 
     if (!oldCode[key]?.length) {

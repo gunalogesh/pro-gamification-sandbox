@@ -15,7 +15,10 @@ export class LayoutComponent implements OnInit {
   constructor(private codeChangeService: CodeChangeService) {
     console.log();
 
-    this.codeChangeService.trackCode(environment.gamification, 'userDetails');
+    this.codeChangeService.trackCode(
+      JSON.stringify(environment.gamification),
+      'userDetails'
+    );
   }
 
   ngOnInit(): void {}

@@ -1,7 +1,7 @@
 import { codeChanged } from './../../utils/helper';
 import { Component, OnInit } from '@angular/core';
 import { environment } from '../../../environments/environment';
-import { CodeChangeService } from 'src/app/Services/code-change.service';
+import { CodeChangeService } from '../../Services/code-change.service';
 
 @Component({
   selector: 'app-layout',
@@ -17,7 +17,10 @@ export class LayoutComponent implements OnInit {
   constructor(private codeChangeService: CodeChangeService) {
     console.log();
 
-    this.codeChangeService.trackCode(environment.gamification, 'userDetails');
+    this.codeChangeService.trackCode(
+      JSON.stringify(environment.gamification),
+      'userDetails'
+    );
   }
 
   ngOnInit(): void {

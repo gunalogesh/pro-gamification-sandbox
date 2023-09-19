@@ -1,10 +1,10 @@
+import { CodeChangeService } from 'src/app/Services/code-change.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from '../../Services/modal.service';
 import { TicketService } from '../../Services/ticket.service';
 import { Gamification } from '@stagetheproindia/pro-gamification';
-import { CodeChangeService } from 'src/app/Services/code-change.service';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
@@ -18,7 +18,7 @@ export class RatingComponent implements OnInit {
     public modalService: ModalService,
     public gamification: Gamification,
     public route: Router,
-    private codeChangeService: CodeChangeService
+    private CodeChangeService: CodeChangeService
   ) {}
   showErrorText: boolean = false;
   ticketId: string = '';
@@ -33,6 +33,10 @@ export class RatingComponent implements OnInit {
       });
       this.trip = this.tripDetails[0];
     });
+    this.CodeChangeService.trackCode(
+      this.addReview.toString(),
+      'rating-add-review'
+    );
   }
   @Input() busDeatails: any = {};
   rating = 0;
@@ -54,6 +58,7 @@ export class RatingComponent implements OnInit {
   }
   onRatingUpdated(rating: number): void {
     this.rating = rating;
+    console.log(this.addReview.toString());
   }
   resetForm() {
     this.showErrorText = false;

@@ -25,7 +25,7 @@
         ></textarea>
         <small *ngIf="showErrorText">Please Provide Rating and Feedback</small>
         <div class="submit-button-container">
-          <div class="submit-button" (click)="addReview()">Submit</div>
+          <div class="submit-button" (click)="addReview(); openHomePage()">Submit</div>
         </div>
       </div>
     </div>

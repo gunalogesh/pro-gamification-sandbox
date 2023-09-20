@@ -17,6 +17,7 @@ import { ModalComponent } from './Components/modal/modal.component';
 import { ProGamificationModule } from '@stagetheproindia/pro-gamification';
 import { environment } from '../environments/environment';
 import { ClickOutsideDirective } from './click-outside.directive';
+import { NotifierComponent } from './Components/notifier/notifier.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ClickOutsideDirective } from './click-outside.directive';
     StarRatingComponent,
     ModalComponent,
     ClickOutsideDirective,
+    NotifierComponent,
   ],
   imports: [
     BrowserModule,

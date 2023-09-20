@@ -1,4 +1,4 @@
-<header style="font-family: sans-serif;">
+<header style="font-family: sans-serif">
   <div class="empty-container"></div>
   <div class="header-content">
     <div class="brand-container">
@@ -7,9 +7,16 @@
     </div>
     <div class="profile-container">
       <div class="trips-container">
-        <button class="trip-text" clickOutside (clickOutside)="closeContianer()" (click)="showTrips()">My Trips</button>
+        <button
+          class="trip-text"
+          clickOutside
+          (clickOutside)="closeContainer(false)"
+          (click)="showTrips()"
+        >
+          My Trips
+        </button>
         <div class="trip-container" *ngIf="showTripContainer">
-          <app-trips (closeContainer)="closeContianer()"></app-trips>
+          <app-trips (closeContainer)="closeContainer($event)"></app-trips>
         </div>
       </div>
       <div>
@@ -26,7 +33,12 @@
 </header>
 <body>
   <div class="container">
-    <router-outlet></router-outlet>
+    <app-book-ticket [tab]="tab"></app-book-ticket>
+    <app-rating
+      [tripId]="tripId"
+      [tab]="tab"
+      (closeContainer)="openHomePage()"
+    ></app-rating>
   </div>
   <footer>
     <div class="empty-container"></div>
@@ -36,3 +48,4 @@
     <div class="empty-container"></div>
   </footer>
 </body>
+<app-notifier></app-notifier>

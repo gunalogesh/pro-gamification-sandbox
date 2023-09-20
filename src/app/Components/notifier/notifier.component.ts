@@ -1,7 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Toast } from '../models/toast.interface';
-import { ToasterService } from '../../Services/toaster.service';
-import { ModalService } from 'src/app/Services/modal.service';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ModalService } from '../../Services/modal.service';
 
 @Component({
   selector: 'app-notifier',

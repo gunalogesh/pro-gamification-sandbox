@@ -1,16 +1,11 @@
 import { Injectable } from '@angular/core';
 import { ModalService } from './modal.service';
-import { BehaviorSubject } from 'rxjs';
-import { ToasterService } from './toaster.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CodeChangeService {
-  constructor(
-    public modalService: ModalService,
-    public toasterService: ToasterService
-  ) {}
+  constructor(public modalService: ModalService) {}
 
   codeChanged(key: string, newCode: string, oldCode: any) {
     let lastIndex = oldCode[key]?.length - 1;

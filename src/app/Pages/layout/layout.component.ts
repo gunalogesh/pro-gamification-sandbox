@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { CodeChangeService } from '../../Services/code-change.service';
-import { Tab } from 'src/app/enum/tab.enum';
+import { Tab } from '../../enum/tab.enum';
 
 @Component({
   selector: 'app-layout',

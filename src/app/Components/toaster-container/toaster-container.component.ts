@@ -5,7 +5,6 @@ import { ToasterService } from '../../Services/toaster.service';
 @Component({
   selector: 'app-toaster-container',
   templateUrl: './toaster-container.component.html',
-  styleUrls: ['./toaster-container.component.css'],
 })
 export class ToasterContainerComponent implements OnInit {
   toasts: Toast[] = [];

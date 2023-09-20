@@ -4,11 +4,11 @@
     width: 300px;
     height: fit-content;
     padding: 0.5rem 1.25rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     border: 1px solid transparent;
     border-radius: 0.25rem;
     animation: move 2s both;
-    margin-top: 6.25rem;
+    z-index:999;
 }
 
 .toast-success {

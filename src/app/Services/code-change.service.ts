@@ -11,7 +11,6 @@ export class CodeChangeService {
     public modalService: ModalService,
     public toasterService: ToasterService
   ) {}
-  codeChangeNotifier = new BehaviorSubject<boolean>(false);
 
   codeChanged(key: string, newCode: string, oldCode: any) {
     let lastIndex = oldCode[key]?.length - 1;
@@ -24,7 +23,6 @@ export class CodeChangeService {
     }
 
     this.toasterService.show('success', '', 'Code pasted successfully');
-    this.codeChangeNotifier.next(true);
     oldCode[key].push(newCode);
     sessionStorage.setItem('codeChanges', JSON.stringify(oldCode));
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Toast } from '../models/toast.interface';
-import { ToasterService } from 'src/app/Services/toaster.service';
+import { ToasterService } from '../../Services/toaster.service';
 
 @Component({
   selector: 'app-toaster-container',
@@ -14,7 +14,6 @@ export class ToasterContainerComponent implements OnInit {
 
   ngOnInit() {
     this.toaster.toast$.subscribe((toast) => {
-
       this.toasts = [toast, ...this.toasts];
       setTimeout(() => this.toasts.pop(), toast.delay || 3000);
     });

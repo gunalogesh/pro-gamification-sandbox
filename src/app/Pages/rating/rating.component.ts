@@ -46,7 +46,7 @@ export class RatingComponent implements OnInit {
     if (this.rating && this.feedback) {
       this.resetForm();
       //Paste the copied code here
-    } else {
+          } else {
       this.showErrorText = true;
     }
   }

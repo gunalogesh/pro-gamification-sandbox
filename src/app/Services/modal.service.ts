@@ -11,7 +11,8 @@ export class ModalService {
     pointsText: '',
     points: '',
   });
-  constructor() {}
+
+  codeNotifier = new BehaviorSubject<boolean>(false);
 
   openModal() {
     this.modalState.next(true);

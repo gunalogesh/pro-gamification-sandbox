@@ -1,5 +1,7 @@
-<div class="toast toast-{{ toast.type }}" [style.top.px]="i * 100">
-  <h4 class="toast-heading">{{ toast.title }}</h4>
-  <p>{{ toast.body }}</p>
-  <a class="close" (click)="remove.emit(i)">&times;</a>
+<div class="modal-wrap" *ngIf="isOpen">
+  <a class="close" (click)="closeDialog()">&times;</a>
+  <div class="modal-content">
+    <h2 class="toast-heading">Code updated Sucessfully!</h2>
+    <p>New Sandbox Configuration Added</p>
+  </div>
 </div>

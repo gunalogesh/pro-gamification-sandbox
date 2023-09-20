@@ -21,8 +21,7 @@ export class CodeChangeService {
       sessionStorage.setItem('codeChanges', JSON.stringify(oldCode));
       return false;
     }
-
-    this.toasterService.show('success', '', 'Code pasted successfully');
+    this.modalService.codeNotifier.next(true);
     oldCode[key].push(newCode);
     sessionStorage.setItem('codeChanges', JSON.stringify(oldCode));
 

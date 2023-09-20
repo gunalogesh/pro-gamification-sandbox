@@ -18,7 +18,6 @@ import { ProGamificationModule } from '@stagetheproindia/pro-gamification';
 import { environment } from '../environments/environment';
 import { ClickOutsideDirective } from './click-outside.directive';
 import { NotifierComponent } from './Components/notifier/notifier.component';
-import { ToasterContainerComponent } from './Components/toaster-container/toaster-container.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +34,6 @@ import { ToasterContainerComponent } from './Components/toaster-container/toaste
     ModalComponent,
     ClickOutsideDirective,
     NotifierComponent,
-    ToasterContainerComponent,
   ],
   imports: [
     BrowserModule,

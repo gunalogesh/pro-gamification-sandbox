@@ -1,3 +1,4 @@
+import { CodeChangeService } from '../../Services/code-change.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from '../../Services/modal.service';
@@ -9,31 +10,35 @@ import { Gamification } from '@stagetheproindia/pro-gamification';
   styleUrls: ['./rating.component.css'],
 })
 export class RatingComponent implements OnInit {
-  @Output() closeContainer = new EventEmitter<boolean>();
+  @Output() closeContainer = new EventEmitter<number>();
   constructor(
     public activatedRoute: ActivatedRoute,
     public ticketService: TicketService,
     public modalService: ModalService,
     public gamification: Gamification,
-    public route: Router
+    public route: Router,
+    private codeChangeService: CodeChangeService
   ) {}
   showErrorText: boolean = false;
   ticketId: string = '';
   tripDetails: any;
   trip: any;
   rewardPoints: any;
+  @Input() tripId = '';
+  @Input() tab = 0;
+  @Input() busDeatails: any = {};
+  rating = 0;
+  feedback = '';
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe((params) => {
+    this.activatedRoute!.params.subscribe((params) => {
       this.ticketId = params['ticketId'];
-      this.tripDetails = this.ticketService.trips.filter((trip) => {
+      this.tripDetails = this.ticketService!!.trips.filter((trip) => {
         return trip.ticketId == this.ticketId;
       });
       this.trip = this.tripDetails[0];
     });
+    this.codeChangeService.trackCode(this.addReview.toString(), 'rating-code');
   }
-  @Input() busDeatails: any = {};
-  rating = 0;
-  feedback = '';
 
   addReview() {
     if (this.rating && this.feedback) {
@@ -52,7 +57,6 @@ export class RatingComponent implements OnInit {
     this.rating = 0;
   }
   openHomePage() {
-    this.closeContainer.emit(false);
-    this.route.navigateByUrl('/book-ticket');
+    this.closeContainer.emit(1);
   }
 }

@@ -15,6 +15,15 @@ header {
   top: 0;
   width: 100%;
   z-index: 11;
+
+ .pro-gami{
+  position: relative;
+  .inspect{
+    position: absolute;
+    right:3.7em;
+    top:5em;
+  }
+ }
 }
 .header-content {
   width: 70%;
@@ -122,6 +131,7 @@ footer {
     right: 0;
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .container {
     width: 90%;

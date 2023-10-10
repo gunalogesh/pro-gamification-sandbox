@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from '../../Services/modal.service';
 import { TicketService } from '../../Services/ticket.service';
 import { Gamification } from '@stagetheproindia/pro-gamification';
+import { Code } from '../../enum/code.enum';
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
@@ -37,13 +38,14 @@ export class RatingComponent implements OnInit {
       });
       this.trip = this.tripDetails[0];
     });
-    this.codeChangeService.trackCode(this.addReview.toString(), 'rating-code');
+    this.codeChangeService.trackCode(this.addReview.toString(), Code.RATING);
   }
 
   addReview() {
     if (this.rating && this.feedback) {
       this.resetForm();
       //Paste the copied code here
+      console.log('');
     } else {
       this.showErrorText = true;
     }

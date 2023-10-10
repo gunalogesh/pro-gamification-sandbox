@@ -19,13 +19,14 @@
           <app-trips (closeContainer)="closeContainer($event)"></app-trips>
         </div>
       </div>
-      <div>
+      <div class="pro-gami">
         <pro-gamification
           [userId]="gamificationUserId"
           [applicationId]="gamificationAppId"
           [themeColor]="'secondary'"
           [menuColor]="'white'"
         ></pro-gamification>
+        <app-inspect-pop-up *ngIf="isOpen" class="inspect"></app-inspect-pop-up>
       </div>
     </div>
   </div>
@@ -49,3 +50,4 @@
   </footer>
 </body>
 <app-notifier></app-notifier>
+<app-initial-popup></app-initial-popup>

@@ -12,8 +12,9 @@ export class ModalService {
     points: '',
   });
 
-  codeNotifier = new BehaviorSubject<boolean>(false);
-
+  codeNotifier = new BehaviorSubject<string>('');
+  popUpInitiator = new BehaviorSubject<boolean>(false);
+  closeNotifier = new BehaviorSubject<boolean>(false);
   openModal() {
     this.modalState.next(true);
   }

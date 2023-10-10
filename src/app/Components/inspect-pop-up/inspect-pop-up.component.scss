@@ -1,0 +1,65 @@
+.popup {
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+  text-align: left;
+  z-index: 999;
+}
+.popup:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.popup:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  position: absolute;
+  z-index: 998;
+  background: linear-gradient(to bottom right, #50a7b2, #4d19c3);
+}
+/*
+Different arrow positioning
+*/
+.popup.arrow-top:before {
+  left: calc(80% - 10px);
+  top: -8px;
+}
+.popup.arrow-right:before {
+  top: calc(50% - 10px);
+  right: -8px;
+}
+.popup.arrow-bottom:before {
+  left: calc(50% - 10px);
+  bottom: -8px;
+}
+.popup.arrow-left:before {
+  top: calc(50% - 10px);
+  left: -8px;
+}
+
+/*
+Popup wrapper
+This is where we add the white background and padding of the content within the popup
+*/
+.popup-wrapper {
+  width: 100%;
+  padding: 0.7em 1em 2em 2em;
+  border-radius: 1.75em;
+  position: relative;
+  z-index: 998;
+  background: linear-gradient(to bottom right, #50a7b2, #4d19c3);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  a {
+    align-self: flex-end;
+    font-size: 2.7em;
+    cursor: pointer;
+  }
+}
